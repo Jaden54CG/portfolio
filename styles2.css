@@ -1,0 +1,212 @@
+/* === Reset and Base Styles === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: 'Segoe UI', sans-serif;
+  scroll-behavior: smooth;
+  line-height: 1.6;
+  background: #000;
+  color: #fff;
+}
+
+/* === Navigation === */
+nav {
+  background: rgba(0, 0, 0, 0.85);
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+nav li {
+  margin: 0 15px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #ffcc00;
+}
+
+/* === Hero Section === */
+.hero {
+  height: 100vh;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)), url('hero-loop.gif') center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* === Parallax and Section Backgrounds === */
+.parallax {
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  padding: 60px 20px;
+  display: flex;
+  align-items: center;
+}
+
+/* Section-Specific Parallax */
+.parallax-about {
+  background: linear-gradient(#1a1a1a, #222);
+}
+
+.flowerboy-bg {
+  background: url('flowerboy.gif') center/cover no-repeat;
+}
+
+.retro80s-bg {
+  background: url('retro-grid.gif') center/cover no-repeat;
+  background-size: cover;
+  animation: glitchEffect 5s infinite linear;
+}
+
+.portal-bg {
+  background: url('portal-effect.gif') center/cover no-repeat;
+}
+
+.parallax-info {
+  background: linear-gradient(to right, #003d5c, #1c1c1c);
+}
+
+.parallax-final {
+  background: linear-gradient(to right, #232526, #414345);
+}
+
+/* === Special Background Effects === */
+.pixelated-bg {
+  background: repeating-linear-gradient(
+    45deg,
+    #ffdd57 0px,
+    #ffdd57 10px,
+    #ff9f1c 10px,
+    #ff9f1c 20px,
+    #f71735 20px,
+    #f71735 30px
+  );
+  background-size: 200% 200%;
+  animation: moveGradient 5s linear infinite;
+  image-rendering: pixelated;
+}
+
+@keyframes moveGradient {
+  0% { background-position: 0 0; }
+  100% { background-position: 100% 100%; }
+}
+
+.glitch-bg {
+  background: linear-gradient(135deg, #6e00ff, #00e5ff);
+  background-size: 400% 400%;
+  animation: glitchMove 6s ease infinite;
+}
+
+@keyframes glitchMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes glitchEffect {
+  0% { transform: scale(1.1); }
+  25% { transform: scale(1.05); }
+  50% { transform: scale(1); }
+  75% { transform: scale(1.05); }
+  100% { transform: scale(1.1); }
+}
+
+/* === Content Box === */
+.content-box {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 30px;
+  max-width: 900px;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+h2, h3 {
+  color: #ffcc00;
+  margin-bottom: 15px;
+}
+
+.section-title {
+  text-align: center;
+  margin: 40px 0 10px;
+  font-size: 2em;
+  color: #fff;
+}
+
+/* === Project Grid === */
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.project-placeholder {
+  width: 200px;
+  height: 150px;
+  border: 2px dashed #aaa;
+  background: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #aaa;
+  font-style: italic;
+}
+
+.light-bg {
+  background: #1a1a1a;
+}
+
+/* === Footer === */
+footer {
+  background: #111;
+  text-align: center;
+  padding: 20px;
+}
+
+footer .top {
+  display: inline-block;
+  margin-top: 10px;
+  color: #ffcc00;
+	text-decoration: none;}
+h3 a {
+  color: #ffcc00;
+  text-decoration: none;
+}
+
+h3 a:hover {
+	text-decoration: underline;}
+.project-img {
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+  border: 2px solid #aaa;
+  border-radius: 5px;
+}
+
+
+
+
+
+
